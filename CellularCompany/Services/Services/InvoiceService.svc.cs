@@ -48,5 +48,15 @@ namespace Services
             });
             return await task.ConfigureAwait(false);
         }
+
+        public async Task<PackageIncludesDto> GetLinePackageIncludes(int packageId)
+        {
+            var task = Task.Factory.StartNew(() =>
+              {
+                  var a = _manager.GetLinePackageIncludes(packageId);
+                  return a;
+              });
+            return await task.ConfigureAwait(false);
+        }
     }
 }

@@ -20,5 +20,7 @@ namespace Common.Interfaces.ServicesInterfaces
         Task<IEnumerable<LineDto>> GetDestinationLines(int lineId);
         [OperationContract]
         Task<PackageDto> GetLinePackage(int lineId);
+        [OperationContract]
+        Task<PackageIncludesDto> GetLinePackageIncludes(int packageId);
     }
 }

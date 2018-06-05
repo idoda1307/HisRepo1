@@ -962,6 +962,9 @@ namespace Client.InvoiceServiceReference {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IInvoiceService/GetLinePackage", ReplyAction="http://tempuri.org/IInvoiceService/GetLinePackageResponse")]
         System.Threading.Tasks.Task<Client.InvoiceServiceReference.PackageDto> GetLinePackageAsync(int lineId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IInvoiceService/GetLinePackageIncludes", ReplyAction="http://tempuri.org/IInvoiceService/GetLinePackageIncludesResponse")]
+        System.Threading.Tasks.Task<Client.InvoiceServiceReference.PackageIncludesDto> GetLinePackageIncludesAsync(int packageId);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -1021,6 +1024,10 @@ namespace Client.InvoiceServiceReference {
         
         public System.Threading.Tasks.Task<Client.InvoiceServiceReference.PackageDto> GetLinePackageAsync(int lineId) {
             return base.Channel.GetLinePackageAsync(lineId);
+        }
+        
+        public System.Threading.Tasks.Task<Client.InvoiceServiceReference.PackageIncludesDto> GetLinePackageIncludesAsync(int packageId) {
+            return base.Channel.GetLinePackageIncludesAsync(packageId);
         }
         
         public virtual System.Threading.Tasks.Task OpenAsync() {

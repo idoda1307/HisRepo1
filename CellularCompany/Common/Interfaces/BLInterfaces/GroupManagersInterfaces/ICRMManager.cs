@@ -27,6 +27,7 @@ namespace Common.Interfaces.BLInterfaces.GroupManagersInterfaces
 
         ClientTypeDto GetClientType(int typeId);
         PackageDto GetLinePackage(int lineId);
+        PackageIncludesDto GetLinePackageIncludes(int packageId);
         //LineDto GetLine(int lineId);
         //ClientDto GetClient(string clientId);
 

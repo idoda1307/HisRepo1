@@ -10,5 +10,6 @@ namespace Client.Infrastructure
     public interface IInvoiceService
     {
         Task<PackageModel> GetPackage(int lineId);
+        Task<PackageIncludesModel> GetPackageIncludes(int packageId);
     }
 }

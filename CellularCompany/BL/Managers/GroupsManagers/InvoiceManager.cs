@@ -73,6 +73,14 @@ namespace BL.GroupManagers.Managers
             }
         }
 
+        public PackageIncludesDto GetLinePackageIncludes(int packageId)
+        {
+            lock(obj)
+            {
+                return crmManager.GetLinePackageIncludes(packageId);
+            }
+        }
+
         public void GetDetails(PaymentDto payment)
         {
             List<LineDto> lines = payment.Client.Lines.ToList();

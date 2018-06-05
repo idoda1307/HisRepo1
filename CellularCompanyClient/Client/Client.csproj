@@ -210,6 +210,9 @@
     <None Include="Connected Services\InvoiceServiceReference\Client.InvoiceServiceReference.PackageDto.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\InvoiceServiceReference\Client.InvoiceServiceReference.PackageIncludesDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\InvoiceServiceReference\Client.InvoiceServiceReference.SMSDto.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>

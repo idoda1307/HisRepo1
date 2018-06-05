@@ -42,6 +42,7 @@ namespace Client.ViewModel
             ClientName = _invoice.Client.FirstName + " " + _invoice.Client.LastName;
             Month = _invoice.Date.Month;
             Package = _invoiceService.GetPackage(_invoice.Line.LineId).Result;
+            PackageIncludes = _invoiceService.GetPackageIncludes(Package.PackageId).Result;
         }
     }
 }

@@ -18,5 +18,11 @@ namespace Client.Services
             PackageDto a= await invoice.GetLinePackageAsync(lineId);
             return a.ToModel();
         }
+
+        public async Task<PackageIncludesModel> GetPackageIncludes(int packageId)
+        {
+            PackageIncludesDto a = await invoice.GetLinePackageIncludesAsync(packageId);
+            return a.ToModel();
+        }
     }
 }

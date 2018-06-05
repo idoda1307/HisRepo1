@@ -57,4 +57,18 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="GetLinePackageIncludes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="packageId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLinePackageIncludesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/Common.Models" minOccurs="0" name="GetLinePackageIncludesResult" nillable="true" type="q7:PackageIncludesDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
 </xs:schema>

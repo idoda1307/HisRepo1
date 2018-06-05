@@ -222,6 +222,25 @@ namespace Client
             };
         }
 
+        public static PackageIncludesModel ToModel(this InvoiceServiceReference.PackageIncludesDto package)
+        {
+            if (package == null) return null;
+            return new PackageIncludesModel()
+            {
+                DiscountPrecentage = package.DiscountPrecentage,
+                FixedPrice = package.FixedPrice,
+                Id = package.Id,
+                IncludeName = package.IncludeName,
+                InsideFamilyCalls = package.InsideFamilyCalls,
+                MaxMinute = package.MaxMinute,
+                MostCalledNumber = package.MostCalledNumber,
+                //Package = package.Package.ToModel(),
+                PackageId = package.PackageId,
+                //Package = package.Package.ToModel()
+
+            };
+        }
+
         public static CRMServiceReference.PackageIncludesDto ToDto(this PackageIncludesModel package)
         {
             try

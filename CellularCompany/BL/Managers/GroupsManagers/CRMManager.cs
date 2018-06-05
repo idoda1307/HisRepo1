@@ -134,6 +134,15 @@ namespace BL.GroupManagers.Managers
             }
         }
 
+        public PackageIncludesDto GetLinePackageIncludes(int packageId)
+        {
+            lock(obj)
+            {
+                var include = packageManager.GetPackageIncludes(packageId);
+                return include;
+            }
+        }
+
         //get many
         public IEnumerable<ClientTypeDto> GetClientTypes()
         {

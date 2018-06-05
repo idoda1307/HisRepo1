@@ -32,6 +32,12 @@
   <wsdl:message name="IInvoiceService_GetLinePackage_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetLinePackageResponse" />
   </wsdl:message>
+  <wsdl:message name="IInvoiceService_GetLinePackageIncludes_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLinePackageIncludes" />
+  </wsdl:message>
+  <wsdl:message name="IInvoiceService_GetLinePackageIncludes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLinePackageIncludesResponse" />
+  </wsdl:message>
   <wsdl:portType name="IInvoiceService">
     <wsdl:operation name="AddSMS">
       <wsdl:input wsaw:Action="http://tempuri.org/IInvoiceService/AddSMS" message="tns:IInvoiceService_AddSMS_InputMessage" />
@@ -48,6 +54,10 @@
     <wsdl:operation name="GetLinePackage">
       <wsdl:input wsaw:Action="http://tempuri.org/IInvoiceService/GetLinePackage" message="tns:IInvoiceService_GetLinePackage_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IInvoiceService/GetLinePackageResponse" message="tns:IInvoiceService_GetLinePackage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLinePackageIncludes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInvoiceService/GetLinePackageIncludes" message="tns:IInvoiceService_GetLinePackageIncludes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInvoiceService/GetLinePackageIncludesResponse" message="tns:IInvoiceService_GetLinePackageIncludes_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IInvoiceService" type="tns:IInvoiceService">
@@ -81,6 +91,15 @@
     </wsdl:operation>
     <wsdl:operation name="GetLinePackage">
       <soap:operation soapAction="http://tempuri.org/IInvoiceService/GetLinePackage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLinePackageIncludes">
+      <soap:operation soapAction="http://tempuri.org/IInvoiceService/GetLinePackageIncludes" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

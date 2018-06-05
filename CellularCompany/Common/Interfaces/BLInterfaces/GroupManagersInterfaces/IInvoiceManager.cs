@@ -13,5 +13,6 @@ namespace Common.Interfaces.BLInterfaces.GroupManagersInterfaces
         Task<SMSDto> CreateSMS(SMSDto sms);
         IEnumerable<LineDto> GetDestinationLines(int lineId);
         PackageDto GetLinePackage(int lineId);
+        PackageIncludesDto GetLinePackageIncludes(int packageId);
     }
 }
