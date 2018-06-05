@@ -1,0 +1,23 @@
+﻿<Page
+    x:Class="Client.Pages.CalculateBillingPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Client.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    DataContext="{Binding Source={StaticResource Locator}, Path=PaymentCalculationVM}">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <TextBlock HorizontalAlignment="Left" TextAlignment="Center" FontSize="50" Height="80" Margin="250,10,0,0" Text="Recipient" TextWrapping="Wrap" VerticalAlignment="Top" Width="1000"/>
+        <TextBlock HorizontalAlignment="Left" Height="50" Margin="200,150,0,0" Text="Select Client" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" FontSize="30"/>
+        <ComboBox HorizontalAlignment="Left" ItemsSource="{Binding Clients,Mode=TwoWay}" DisplayMemberPath="ClientId" SelectedItem="{Binding Client,Mode=TwoWay}" Height="50" Margin="600,150,0,0" VerticalAlignment="Top" Width="300" FontSize="30"/>
+        <TextBlock HorizontalAlignment="Left" Height="50" Margin="200,250,0,0" Text="Select Line" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" FontSize="30"/>
+        <ComboBox HorizontalAlignment="Left" Height="50" ItemsSource="{Binding Lines,Mode=TwoWay}" DisplayMemberPath="Number" SelectedItem="{Binding Invoice.Line,Mode=TwoWay}" Margin="600,250,0,0" VerticalAlignment="Top" Width="300" FontSize="30"/>
+        <TextBlock HorizontalAlignment="Left" Height="50" Margin="200,350,0,0" Text="Select Month" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" FontSize="30"/>
+        <DatePicker HorizontalAlignment="Left" Date="{Binding Invoice.Date,Mode=TwoWay}"  Height="50" Margin="600,350,0,0" VerticalAlignment="Top" Width="300" FontSize="30"/>
+        <Button Content="Calculate" Command="{Binding CalculateCommand}" HorizontalAlignment="Left" Height="80" Margin="600,500,0,0" VerticalAlignment="Top" Width="250" FontSize="30"/>
+        <Button Content="Go Back" Command="{Binding GoBackCommand,Mode=TwoWay}" HorizontalAlignment="Left" Height="80" Margin="1033,16,0,0" VerticalAlignment="Top" Width="200" FontSize="40"/>
+
+    </Grid>
+</Page>

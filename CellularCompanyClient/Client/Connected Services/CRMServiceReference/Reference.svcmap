@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="4116f237-dacd-490b-9a27-374d9c11dcbb" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>false</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:61783/Services/CRMService.svc/mex/mex/mex/mex/mex/mex/mex/mex/mex/mex/mex/mex/mex/mex/mex/mex/mex/mex/mex/mex/mex/mex/mex/mex/mex/mex/mex/mex/mex/mex" Protocol="mex" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="service1.wsdl" MetadataType="Wsdl" ID="dab98b32-ad81-4cc6-b209-5d940bf53fd4" SourceId="1" SourceUrl="http://localhost:61783/Services/CRMService.svc/mex/mex/mex/mex/mex/mex/mex/mex/mex/mex/mex/mex/mex/mex/mex/mex/mex/mex/mex/mex/mex/mex/mex/mex/mex/mex/mex/mex/mex/mex" />
+    <MetadataFile FileName="service3.xsd" MetadataType="Schema" ID="82da524e-9a10-40ad-b543-82ff797c119c" SourceId="1" SourceUrl="http://localhost:61783/Services/CRMService.svc/mex/mex/mex/mex/mex/mex/mex/mex/mex/mex/mex/mex/mex/mex/mex/mex/mex/mex/mex/mex/mex/mex/mex/mex/mex/mex/mex/mex/mex/mex" />
+    <MetadataFile FileName="service31.xsd" MetadataType="Schema" ID="7be1c2fa-80c4-4613-874c-11d28879b1d1" SourceId="1" SourceUrl="http://localhost:61783/Services/CRMService.svc/mex/mex/mex/mex/mex/mex/mex/mex/mex/mex/mex/mex/mex/mex/mex/mex/mex/mex/mex/mex/mex/mex/mex/mex/mex/mex/mex/mex/mex/mex" />
+    <MetadataFile FileName="Common.Models1.xsd" MetadataType="Schema" ID="d95dc2ba-5210-4fae-bef3-e368fa800066" SourceId="1" SourceUrl="http://localhost:61783/Services/CRMService.svc/mex/mex/mex/mex/mex/mex/mex/mex/mex/mex/mex/mex/mex/mex/mex/mex/mex/mex/mex/mex/mex/mex/mex/mex/mex/mex/mex/mex/mex/mex" />
+    <MetadataFile FileName="service32.xsd" MetadataType="Schema" ID="c589effe-c2bc-42ce-a761-ecd9b95ba8c6" SourceId="1" SourceUrl="http://localhost:61783/Services/CRMService.svc/mex/mex/mex/mex/mex/mex/mex/mex/mex/mex/mex/mex/mex/mex/mex/mex/mex/mex/mex/mex/mex/mex/mex/mex/mex/mex/mex/mex/mex/mex" />
+    <MetadataFile FileName="Arrays1.xsd" MetadataType="Schema" ID="d556fb44-21cb-4888-a1f7-6bd2c2291a2e" SourceId="1" SourceUrl="http://localhost:61783/Services/CRMService.svc/mex/mex/mex/mex/mex/mex/mex/mex/mex/mex/mex/mex/mex/mex/mex/mex/mex/mex/mex/mex/mex/mex/mex/mex/mex/mex/mex/mex/mex/mex" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

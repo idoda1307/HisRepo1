@@ -1,0 +1,326 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="CRMService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import namespace="http://tempuri.org/" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/Common.Models" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ICRMService_AddClient_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddClient" />
+  </wsdl:message>
+  <wsdl:message name="ICRMService_AddClient_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddClientResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICRMService_AddLineEntity_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddLineEntity" />
+  </wsdl:message>
+  <wsdl:message name="ICRMService_AddLineEntity_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddLineEntityResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICRMService_AddPackage_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddPackage" />
+  </wsdl:message>
+  <wsdl:message name="ICRMService_AddPackage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddPackageResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICRMService_RemoveClient_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveClient" />
+  </wsdl:message>
+  <wsdl:message name="ICRMService_RemoveClient_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveClientResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICRMService_RemoveLine_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveLine" />
+  </wsdl:message>
+  <wsdl:message name="ICRMService_RemoveLine_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveLineResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICRMService_UpdateClient_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateClient" />
+  </wsdl:message>
+  <wsdl:message name="ICRMService_UpdateClient_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateClientResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICRMService_UpdateLine_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateLine" />
+  </wsdl:message>
+  <wsdl:message name="ICRMService_UpdateLine_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateLineResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICRMService_UpdatePackage_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePackage" />
+  </wsdl:message>
+  <wsdl:message name="ICRMService_UpdatePackage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePackageResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICRMService_GetLinePackage_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLinePackage" />
+  </wsdl:message>
+  <wsdl:message name="ICRMService_GetLinePackage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLinePackageResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICRMService_GetSelectedNumbers_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSelectedNumbers" />
+  </wsdl:message>
+  <wsdl:message name="ICRMService_GetSelectedNumbers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSelectedNumbersResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICRMService_GetClientTypes_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetClientTypes" />
+  </wsdl:message>
+  <wsdl:message name="ICRMService_GetClientTypes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetClientTypesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICRMService_GetClients_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetClients" />
+  </wsdl:message>
+  <wsdl:message name="ICRMService_GetClients_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetClientsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICRMService_GetClientsIds_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetClientsIds" />
+  </wsdl:message>
+  <wsdl:message name="ICRMService_GetClientsIds_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetClientsIdsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICRMService_GetLinesOfClient_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLinesOfClient" />
+  </wsdl:message>
+  <wsdl:message name="ICRMService_GetLinesOfClient_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLinesOfClientResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICRMService_GetPackages_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPackages" />
+  </wsdl:message>
+  <wsdl:message name="ICRMService_GetPackages_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPackagesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICRMService_GetLines_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLines" />
+  </wsdl:message>
+  <wsdl:message name="ICRMService_GetLines_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLinesResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ICRMService">
+    <wsdl:operation name="AddClient">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICRMService/AddClient" message="tns:ICRMService_AddClient_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICRMService/AddClientResponse" message="tns:ICRMService_AddClient_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddLineEntity">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICRMService/AddLineEntity" message="tns:ICRMService_AddLineEntity_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICRMService/AddLineEntityResponse" message="tns:ICRMService_AddLineEntity_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddPackage">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICRMService/AddPackage" message="tns:ICRMService_AddPackage_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICRMService/AddPackageResponse" message="tns:ICRMService_AddPackage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveClient">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICRMService/RemoveClient" message="tns:ICRMService_RemoveClient_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICRMService/RemoveClientResponse" message="tns:ICRMService_RemoveClient_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveLine">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICRMService/RemoveLine" message="tns:ICRMService_RemoveLine_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICRMService/RemoveLineResponse" message="tns:ICRMService_RemoveLine_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateClient">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICRMService/UpdateClient" message="tns:ICRMService_UpdateClient_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICRMService/UpdateClientResponse" message="tns:ICRMService_UpdateClient_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateLine">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICRMService/UpdateLine" message="tns:ICRMService_UpdateLine_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICRMService/UpdateLineResponse" message="tns:ICRMService_UpdateLine_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePackage">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICRMService/UpdatePackage" message="tns:ICRMService_UpdatePackage_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICRMService/UpdatePackageResponse" message="tns:ICRMService_UpdatePackage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLinePackage">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICRMService/GetLinePackage" message="tns:ICRMService_GetLinePackage_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICRMService/GetLinePackageResponse" message="tns:ICRMService_GetLinePackage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSelectedNumbers">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICRMService/GetSelectedNumbers" message="tns:ICRMService_GetSelectedNumbers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICRMService/GetSelectedNumbersResponse" message="tns:ICRMService_GetSelectedNumbers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetClientTypes">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICRMService/GetClientTypes" message="tns:ICRMService_GetClientTypes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICRMService/GetClientTypesResponse" message="tns:ICRMService_GetClientTypes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetClients">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICRMService/GetClients" message="tns:ICRMService_GetClients_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICRMService/GetClientsResponse" message="tns:ICRMService_GetClients_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetClientsIds">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICRMService/GetClientsIds" message="tns:ICRMService_GetClientsIds_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICRMService/GetClientsIdsResponse" message="tns:ICRMService_GetClientsIds_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLinesOfClient">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICRMService/GetLinesOfClient" message="tns:ICRMService_GetLinesOfClient_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICRMService/GetLinesOfClientResponse" message="tns:ICRMService_GetLinesOfClient_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPackages">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICRMService/GetPackages" message="tns:ICRMService_GetPackages_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICRMService/GetPackagesResponse" message="tns:ICRMService_GetPackages_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLines">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICRMService/GetLines" message="tns:ICRMService_GetLines_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICRMService/GetLinesResponse" message="tns:ICRMService_GetLines_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_ICRMService" type="tns:ICRMService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="AddClient">
+      <soap:operation soapAction="http://tempuri.org/ICRMService/AddClient" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddLineEntity">
+      <soap:operation soapAction="http://tempuri.org/ICRMService/AddLineEntity" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddPackage">
+      <soap:operation soapAction="http://tempuri.org/ICRMService/AddPackage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveClient">
+      <soap:operation soapAction="http://tempuri.org/ICRMService/RemoveClient" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveLine">
+      <soap:operation soapAction="http://tempuri.org/ICRMService/RemoveLine" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateClient">
+      <soap:operation soapAction="http://tempuri.org/ICRMService/UpdateClient" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateLine">
+      <soap:operation soapAction="http://tempuri.org/ICRMService/UpdateLine" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePackage">
+      <soap:operation soapAction="http://tempuri.org/ICRMService/UpdatePackage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLinePackage">
+      <soap:operation soapAction="http://tempuri.org/ICRMService/GetLinePackage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSelectedNumbers">
+      <soap:operation soapAction="http://tempuri.org/ICRMService/GetSelectedNumbers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetClientTypes">
+      <soap:operation soapAction="http://tempuri.org/ICRMService/GetClientTypes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetClients">
+      <soap:operation soapAction="http://tempuri.org/ICRMService/GetClients" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetClientsIds">
+      <soap:operation soapAction="http://tempuri.org/ICRMService/GetClientsIds" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLinesOfClient">
+      <soap:operation soapAction="http://tempuri.org/ICRMService/GetLinesOfClient" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPackages">
+      <soap:operation soapAction="http://tempuri.org/ICRMService/GetPackages" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLines">
+      <soap:operation soapAction="http://tempuri.org/ICRMService/GetLines" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CRMService">
+    <wsdl:port name="BasicHttpBinding_ICRMService" binding="tns:BasicHttpBinding_ICRMService">
+      <soap:address location="http://localhost:61783/Services/CRMService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,29 @@
+﻿@model CustomersRegistration.Models.UserDto
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        @using (Html.BeginForm())
+        {
+            @Html.ValidationSummary()
+            <br />
+            @Html.LabelFor(u => u.Id)
+            @Html.EditorFor(u => u.Id)
+            <br />
+            @Html.LabelFor(u => u.ContactNumber)
+            @Html.EditorFor(u => u.ContactNumber)
+            <button id="myBtn" type="submit">Log In</button>
+        }
+    </div>
+</body>
+</html>

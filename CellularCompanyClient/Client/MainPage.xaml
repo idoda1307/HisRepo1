@@ -1,0 +1,32 @@
+﻿<Page
+    x:Class="Client.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Client"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    DataContext="{Binding Source={StaticResource Locator}, Path=MainVM}">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*">
+
+            </ColumnDefinition>
+            <ColumnDefinition Width="*">
+
+            </ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Button Content="Customer" Command="{Binding NavigateToClient}" BorderBrush="Black" BorderThickness="5" Height="255" Width="760" Grid.Column="0" Grid.Row="0" VerticalAlignment="Top"/>
+        <Button Content="Lines" Command="{Binding NavigateToLines}" Height="255" BorderBrush="Black" BorderThickness="5" Width="760" Grid.Column="1" Grid.Row="0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Button Content="Simulator" Command="{Binding NavigateToSimulator}" BorderBrush="Black" BorderThickness="5" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Top" Height="255" Width="760"/>
+        <Button Content="Payment" Command="{Binding NavigateToPayment}" BorderBrush="Black" BorderThickness="5" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Left" Height="255" Width="760" VerticalAlignment="Top" />
+        <Button Content="Managers" Command="{Binding NavigateToManagers}" BorderBrush="Black" BorderThickness="5" Grid.Column="0" Grid.Row="2" HorizontalAlignment="Left" VerticalAlignment="Top" Height="255" Width="760"/>
+        <Button Content="Optimal Package" Command="{Binding NavigateToOptimalPackage}" BorderBrush="Black" BorderThickness="5" Grid.Column="1" Grid.Row="2" Height="255" Width="760" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+    </Grid>
+</Page>
