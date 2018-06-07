@@ -119,20 +119,6 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="GetLinePackage">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="lineId" type="xs:int" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetLinePackageResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/Common.Models" minOccurs="0" name="GetLinePackageResult" nillable="true" type="q15:PackageDto" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
   <xs:element name="GetSelectedNumbers">
     <xs:complexType>
       <xs:sequence>
@@ -143,7 +129,7 @@
   <xs:element name="GetSelectedNumbersResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q16="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="GetSelectedNumbersResult" nillable="true" type="q16:ArrayOfstring" />
+        <xs:element xmlns:q15="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="GetSelectedNumbersResult" nillable="true" type="q15:ArrayOfstring" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -155,7 +141,7 @@
   <xs:element name="GetClientTypesResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/Common.Models" minOccurs="0" name="GetClientTypesResult" nillable="true" type="q17:ArrayOfClientTypeDto" />
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/Common.Models" minOccurs="0" name="GetClientTypesResult" nillable="true" type="q16:ArrayOfClientTypeDto" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -167,7 +153,7 @@
   <xs:element name="GetClientsResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/Common.Models" minOccurs="0" name="GetClientsResult" nillable="true" type="q18:ArrayOfClientDto" />
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/Common.Models" minOccurs="0" name="GetClientsResult" nillable="true" type="q17:ArrayOfClientDto" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -179,7 +165,7 @@
   <xs:element name="GetClientsIdsResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q19="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="GetClientsIdsResult" nillable="true" type="q19:ArrayOfstring" />
+        <xs:element xmlns:q18="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="GetClientsIdsResult" nillable="true" type="q18:ArrayOfstring" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -193,7 +179,7 @@
   <xs:element name="GetLinesOfClientResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/Common.Models" minOccurs="0" name="GetLinesOfClientResult" nillable="true" type="q20:ArrayOfLineDto" />
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/Common.Models" minOccurs="0" name="GetLinesOfClientResult" nillable="true" type="q19:ArrayOfLineDto" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -205,7 +191,7 @@
   <xs:element name="GetPackagesResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/Common.Models" minOccurs="0" name="GetPackagesResult" nillable="true" type="q21:ArrayOfPackageDto" />
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/Common.Models" minOccurs="0" name="GetPackagesResult" nillable="true" type="q20:ArrayOfPackageDto" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -217,7 +203,7 @@
   <xs:element name="GetLinesResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/Common.Models" minOccurs="0" name="GetLinesResult" nillable="true" type="q22:ArrayOfLineDto" />
+        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/Common.Models" minOccurs="0" name="GetLinesResult" nillable="true" type="q21:ArrayOfLineDto" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

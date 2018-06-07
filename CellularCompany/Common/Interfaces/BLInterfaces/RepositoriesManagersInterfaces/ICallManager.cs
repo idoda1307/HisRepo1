@@ -11,6 +11,8 @@ namespace Common.Interfaces.BLInterfaces.RepositoriesManagersInterfaces
     {
         Task<CallsDto> AddCallDto(CallsDto dto);
         CallsDto GetCallDto(int callId);
-        IEnumerable<CallsDto> GetCallsDtos(string clientId);
+        IEnumerable<CallsDto> GetCallsDtos(int lineId);
+        IEnumerable<CallsDto> GetCallsOfClient(string clientId);
+        double GetNumberOfMinutes(LineDto line, PackageIncludesDto packageIncludes);
     }
 }

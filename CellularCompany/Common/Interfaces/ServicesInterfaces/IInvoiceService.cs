@@ -22,5 +22,11 @@ namespace Common.Interfaces.ServicesInterfaces
         Task<PackageDto> GetLinePackage(int lineId);
         [OperationContract]
         Task<PackageIncludesDto> GetLinePackageIncludes(int packageId);
+        [OperationContract]
+        Task<double> CalculateNumberOfMinutesLeftInPackage(int minutesInPackage, LineDto line);
+        [OperationContract]
+        Task<ClientTypeDto> GetClientType(int clientTypeId);
+        [OperationContract]
+        Task<double> GetNumberOfMinutes(LineDto line, PackageIncludesDto packageIncludes);
     }
 }

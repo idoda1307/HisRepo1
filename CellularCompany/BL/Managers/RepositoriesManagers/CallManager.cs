@@ -32,9 +32,19 @@ namespace BL.Managers.RepositoriesManagers
             return GetContainer().Resolve<ICallsRepository>().GetCall(callId);
         }
 
-        public IEnumerable<CallsDto> GetCallsDtos(string clientId)
+        public IEnumerable<CallsDto> GetCallsDtos(int lineId)
         {
-            return GetContainer().Resolve<ICallsRepository>().GetCalls(clientId);
+            return GetContainer().Resolve<ICallsRepository>().GetCalls(lineId);
+        }
+
+        public IEnumerable<CallsDto> GetCallsOfClient(string clientId)
+        {
+            return GetContainer().Resolve<ICallsRepository>().GetCallsOfClient(clientId);
+        }
+
+        public double GetNumberOfMinutes(LineDto line, PackageIncludesDto packageIncludes)
+        {
+            return GetContainer().Resolve<ICallsRepository>().GetNumberOfMinutes(line, packageIncludes);
         }
     }
 }

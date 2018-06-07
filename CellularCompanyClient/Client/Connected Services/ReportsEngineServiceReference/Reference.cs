@@ -98,7 +98,7 @@ namespace Client.ReportsEngineServiceReference {
         
         private static System.ServiceModel.EndpointAddress GetEndpointAddress(EndpointConfiguration endpointConfiguration) {
             if ((endpointConfiguration == EndpointConfiguration.BasicHttpBinding_IReportsEngineService)) {
-                return new System.ServiceModel.EndpointAddress("http://localhost:61783/services/ReportsEngineService.svc");
+                return new System.ServiceModel.EndpointAddress("http://localhost:61783/Services/ReportsEngineService.svc");
             }
             throw new System.InvalidOperationException(string.Format("Could not find endpoint with name \'{0}\'.", endpointConfiguration));
         }

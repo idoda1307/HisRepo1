@@ -21,13 +21,13 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:61783/services/reportsengineservice.svc/mex/mex/mex" Protocol="mex" SourceId="1" />
+    <MetadataSource Address="http://localhost:61783/services/reportsengineservice.svc/mex/mex/mex/mex" Protocol="mex" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="168f0071-ecc9-480e-94b2-b0eba0f36bba" SourceId="1" SourceUrl="http://localhost:61783/services/reportsengineservice.svc/mex/mex/mex" />
-    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="7f13d232-1703-493c-85b3-4eff4f29fcd6" SourceId="1" SourceUrl="http://localhost:61783/services/reportsengineservice.svc/mex/mex/mex" />
-    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="d905df1b-4390-4218-90a0-21ad988b1a44" SourceId="1" SourceUrl="http://localhost:61783/services/reportsengineservice.svc/mex/mex/mex" />
-    <MetadataFile FileName="Arrays.xsd" MetadataType="Schema" ID="718bc2e4-224b-492a-a463-74f2104a433d" SourceId="1" SourceUrl="http://localhost:61783/services/reportsengineservice.svc/mex/mex/mex" />
+    <MetadataFile FileName="service1.wsdl" MetadataType="Wsdl" ID="bb6c0b46-7c65-4e3f-add6-2854c33bcf81" SourceId="1" SourceUrl="http://localhost:61783/services/reportsengineservice.svc/mex/mex/mex/mex" />
+    <MetadataFile FileName="service2.xsd" MetadataType="Schema" ID="dbaf3316-a8a9-4bee-ae67-8b7879d838ed" SourceId="1" SourceUrl="http://localhost:61783/services/reportsengineservice.svc/mex/mex/mex/mex" />
+    <MetadataFile FileName="service21.xsd" MetadataType="Schema" ID="c4874761-92ea-4039-a6aa-b6e36f35114f" SourceId="1" SourceUrl="http://localhost:61783/services/reportsengineservice.svc/mex/mex/mex/mex" />
+    <MetadataFile FileName="Arrays1.xsd" MetadataType="Schema" ID="783c9270-c8fe-4081-b8d9-f15d4606200f" SourceId="1" SourceUrl="http://localhost:61783/services/reportsengineservice.svc/mex/mex/mex/mex" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

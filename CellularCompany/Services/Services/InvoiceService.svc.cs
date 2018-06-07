@@ -58,5 +58,36 @@ namespace Services
               });
             return await task.ConfigureAwait(false);
         }
+
+        public async Task<double> CalculateNumberOfMinutesLeftInPackage(int minutesInPackage, LineDto line)
+        {
+            var task = Task.Factory.StartNew(() =>
+              {
+                  var a = _manager.CalculateNumberOfMinutesLeftInPackage(minutesInPackage, line);
+                  return a;
+              });
+            return await task.ConfigureAwait(false);
+        }
+
+
+        public async Task<ClientTypeDto> GetClientType(int clientTypeId)
+        {
+            var task = Task.Factory.StartNew(() =>
+            {
+                var a = _manager.GetClientType(clientTypeId);
+                return a;
+            });
+            return await task.ConfigureAwait(false);
+        }
+
+        public async Task<double> GetNumberOfMinutes(LineDto line, PackageIncludesDto packageIncludes)
+        {
+            var task = Task.Factory.StartNew(() =>
+            {
+                var a = _manager.GetNumberOfMinutes(line, packageIncludes);
+                return a;
+            });
+            return await task.ConfigureAwait(false);
+        }
     }
 }

@@ -38,6 +38,24 @@
   <wsdl:message name="IInvoiceService_GetLinePackageIncludes_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetLinePackageIncludesResponse" />
   </wsdl:message>
+  <wsdl:message name="IInvoiceService_CalculateNumberOfMinutesLeftInPackage_InputMessage">
+    <wsdl:part name="parameters" element="tns:CalculateNumberOfMinutesLeftInPackage" />
+  </wsdl:message>
+  <wsdl:message name="IInvoiceService_CalculateNumberOfMinutesLeftInPackage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CalculateNumberOfMinutesLeftInPackageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInvoiceService_GetClientType_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetClientType" />
+  </wsdl:message>
+  <wsdl:message name="IInvoiceService_GetClientType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetClientTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInvoiceService_GetNumberOfMinutes_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNumberOfMinutes" />
+  </wsdl:message>
+  <wsdl:message name="IInvoiceService_GetNumberOfMinutes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNumberOfMinutesResponse" />
+  </wsdl:message>
   <wsdl:portType name="IInvoiceService">
     <wsdl:operation name="AddSMS">
       <wsdl:input wsaw:Action="http://tempuri.org/IInvoiceService/AddSMS" message="tns:IInvoiceService_AddSMS_InputMessage" />
@@ -58,6 +76,18 @@
     <wsdl:operation name="GetLinePackageIncludes">
       <wsdl:input wsaw:Action="http://tempuri.org/IInvoiceService/GetLinePackageIncludes" message="tns:IInvoiceService_GetLinePackageIncludes_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IInvoiceService/GetLinePackageIncludesResponse" message="tns:IInvoiceService_GetLinePackageIncludes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CalculateNumberOfMinutesLeftInPackage">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInvoiceService/CalculateNumberOfMinutesLeftInPackage" message="tns:IInvoiceService_CalculateNumberOfMinutesLeftInPackage_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInvoiceService/CalculateNumberOfMinutesLeftInPackageResponse" message="tns:IInvoiceService_CalculateNumberOfMinutesLeftInPackage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetClientType">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInvoiceService/GetClientType" message="tns:IInvoiceService_GetClientType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInvoiceService/GetClientTypeResponse" message="tns:IInvoiceService_GetClientType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNumberOfMinutes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInvoiceService/GetNumberOfMinutes" message="tns:IInvoiceService_GetNumberOfMinutes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInvoiceService/GetNumberOfMinutesResponse" message="tns:IInvoiceService_GetNumberOfMinutes_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IInvoiceService" type="tns:IInvoiceService">
@@ -100,6 +130,33 @@
     </wsdl:operation>
     <wsdl:operation name="GetLinePackageIncludes">
       <soap:operation soapAction="http://tempuri.org/IInvoiceService/GetLinePackageIncludes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CalculateNumberOfMinutesLeftInPackage">
+      <soap:operation soapAction="http://tempuri.org/IInvoiceService/CalculateNumberOfMinutesLeftInPackage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetClientType">
+      <soap:operation soapAction="http://tempuri.org/IInvoiceService/GetClientType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNumberOfMinutes">
+      <soap:operation soapAction="http://tempuri.org/IInvoiceService/GetNumberOfMinutes" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

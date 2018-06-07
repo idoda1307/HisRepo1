@@ -81,9 +81,16 @@ namespace Client.ViewModel
             GoBackCommand = new RelayCommand(() =>_navigationService.GoBack());
             CalculateCommand = new RelayCommand(() =>
               {
-                  var invoice = new InvoiceModel() { Date = Invoice.Date, Client = Client, Line = Invoice.Line };
-                  TransformModel.Invoice = invoice;
-                  _navigationService.NavigateTo("PaymentView");
+                  try
+                  {
+                      var invoice = new InvoiceModel() { Date = Invoice.Date, Client = Client, Line = Invoice.Line };
+                      TransformModel.Invoice = invoice;
+                      _navigationService.NavigateTo("PaymentView");
+                  }
+                  catch(Exception ex)
+                  {
+                      Debug.WriteLine(ex.Message);
+                  }
               });
         }
     }

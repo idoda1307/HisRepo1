@@ -14,5 +14,8 @@ namespace Common.Interfaces.BLInterfaces.GroupManagersInterfaces
         IEnumerable<LineDto> GetDestinationLines(int lineId);
         PackageDto GetLinePackage(int lineId);
         PackageIncludesDto GetLinePackageIncludes(int packageId);
+        double CalculateNumberOfMinutesLeftInPackage(int minutesInPackage, LineDto line);
+        ClientTypeDto GetClientType(int typeId);
+        double GetNumberOfMinutes(LineDto line, PackageIncludesDto packageIncludes);
     }
 }

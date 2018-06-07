@@ -24,5 +24,22 @@ namespace Client.Services
             PackageIncludesDto a = await invoice.GetLinePackageIncludesAsync(packageId);
             return a.ToModel();
         }
+
+        public async Task<double> GetMinutesLeft(PackageIncludesModel packageIncludes,LineModel line)
+        {
+            return await invoice.CalculateNumberOfMinutesLeftInPackageAsync(packageIncludes.MaxMinute, line.ToDto1());
+
+        }
+
+        public async Task<ClientTypeModel> GetClientType(int typeId)
+        {
+            ClientTypeDto dto= await invoice.GetClientTypeAsync(typeId);
+            return dto.ToModel1();
+        }
+
+        public async Task<double> MinutesBeyondLimit(LineModel line,PackageIncludesModel packageIncludes)
+        {
+            return await invoice.GetNumberOfMinutesAsync(line.ToDto1(), packageIncludes.ToDto1());
+        }
     }
 }

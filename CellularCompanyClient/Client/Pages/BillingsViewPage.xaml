@@ -6,10 +6,9 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-     DataContext="{Binding Source={StaticResource Locator}, Path=PaymentViewVM}"
-    >
+    DataContext="{Binding Source={StaticResource Locator}, Path=PaymentViewVM}">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+<Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <TextBlock HorizontalAlignment="Left" Text="Client Name" FontSize="30" Height="75" Margin="50,50,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200"/>
         <TextBlock HorizontalAlignment="Left" Height="75" Margin="250,50,0,0" Text="{Binding ClientName,Mode=TwoWay}" TextWrapping="Wrap" VerticalAlignment="Top" Width="250" FontSize="30"/>
         <TextBlock HorizontalAlignment="Left" Height="75" Margin="550,50,0,0" Text="Month" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" FontSize="30"/>
@@ -17,42 +16,28 @@
         <TextBlock HorizontalAlignment="Left" Height="75" Margin="50,125,0,0" Text="Line Number" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" FontSize="30"/>
         <TextBlock HorizontalAlignment="Left" Height="75" Margin="250,125,0,0" Text="{Binding Invoice.Line.Number,Mode=TwoWay}" TextWrapping="Wrap" VerticalAlignment="Top" Width="250" FontSize="30"/>
         <TextBlock HorizontalAlignment="Left" Height="75" Margin="50,200,0,0" Text="Price" FontSize="30" TextWrapping="Wrap" VerticalAlignment="Top" Width="200"/>
-        <TextBlock HorizontalAlignment="Left" Height="75" Margin="250,200,0,0" Text="" FontSize="30" TextWrapping="Wrap" VerticalAlignment="Top" Width="250"/>
+        <TextBlock HorizontalAlignment="Left" Height="75" Margin="250,200,0,0" Text="{Binding Package.PackageTotalPrice}" FontSize="30" TextWrapping="Wrap" VerticalAlignment="Top" Width="250"/>
         <TextBlock HorizontalAlignment="Left" Height="75" Margin="550,200,0,0" Text="Package Info" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" FontSize="30"/>
         <TextBlock HorizontalAlignment="Left" Height="75" Margin="50,275,0,0" Text="Package" FontSize="40" TextWrapping="Wrap" VerticalAlignment="Top" Width="200"/>
         <TextBlock HorizontalAlignment="Left" Height="50" Margin="50,350,0,0" Text="Minutes" FontSize="30" TextWrapping="Wrap" VerticalAlignment="Top" Width="150"/>
-        <TextBlock HorizontalAlignment="Left" Height="50" Margin="200,350,0,0" Text="" FontSize="30" TextWrapping="Wrap" VerticalAlignment="Top" Width="150"/>
+        <TextBlock HorizontalAlignment="Left" Height="50" Margin="200,350,0,0" Text="{Binding PackageIncludes.MaxMinute,Mode=TwoWay}" FontSize="30" TextWrapping="Wrap" VerticalAlignment="Top" Width="150"/>
         <TextBlock HorizontalAlignment="Left" Height="50" Margin="350,350,0,0" Text="Minutes Left In Package" FontSize="30" TextWrapping="Wrap" VerticalAlignment="Top" Width="325"/>
-        <TextBlock HorizontalAlignment="Left" Height="50" Margin="700,350,0,0" Text="" FontSize="30" TextWrapping="Wrap" VerticalAlignment="Top" Width="150"/>
+        <TextBlock HorizontalAlignment="Left" Height="50" Margin="700,350,0,0" Text="{Binding MinutesLeft,Mode=TwoWay}" FontSize="30" TextWrapping="Wrap" VerticalAlignment="Top" Width="150"/>
         <TextBlock HorizontalAlignment="Left" Height="50" Margin="850,350,0,0" Text="Package % Usage" FontSize="30" TextWrapping="Wrap" VerticalAlignment="Top" Width="250"/>
         <TextBlock HorizontalAlignment="Left" Height="50" Margin="1100,350,0,0" Text="" FontSize="30" TextWrapping="Wrap" VerticalAlignment="Top" Width="150"/>
-        <TextBlock HorizontalAlignment="Left" Height="50" Margin="50,400,0,0" Text="SMS" FontSize="30" TextWrapping="Wrap" VerticalAlignment="Top" Width="150"/>
-        <TextBlock HorizontalAlignment="Left" Height="50" Margin="200,400,0,0" Text="" FontSize="30" TextWrapping="Wrap" VerticalAlignment="Top" Width="150"/>
-        <TextBlock HorizontalAlignment="Left" Height="50" Margin="350,400,0,0" Text="SMS Left In Package" FontSize="30" TextWrapping="Wrap" VerticalAlignment="Top" Width="325"/>
-        <TextBlock HorizontalAlignment="Left" Height="50" Margin="700,400,0,0" Text="" FontSize="30" TextWrapping="Wrap" VerticalAlignment="Top" Width="150"/>
-        <TextBlock HorizontalAlignment="Left" Height="50" Margin="850,400,0,0" Text="Package % Usage" FontSize="30" TextWrapping="Wrap" VerticalAlignment="Top" Width="250"/>
-        <TextBlock HorizontalAlignment="Left" Height="50" Margin="1100,400,0,0" Text="" FontSize="30" TextWrapping="Wrap" VerticalAlignment="Top" Width="150"/>
-        <TextBlock HorizontalAlignment="Left" Height="50" Margin="50,450,0,0" Text="Package Price" FontSize="30" TextWrapping="Wrap" VerticalAlignment="Top" Width="200"/>
-        <TextBlock HorizontalAlignment="Left" Height="50" Margin="300,450,0,0" Text="" FontSize="30" TextWrapping="Wrap" VerticalAlignment="Top" Width="150"/>
-        <TextBlock HorizontalAlignment="Left" Height="50" Margin="500,450,0,0" Text="Price" FontSize="30" TextWrapping="Wrap" VerticalAlignment="Top" Width="200"/>
-        <TextBlock HorizontalAlignment="Left" Height="50" Margin="750,450,0,0" Text="" FontSize="30" TextWrapping="Wrap" VerticalAlignment="Top" Width="150"/>
+        <TextBlock HorizontalAlignment="Left" Height="50" Margin="50,400,0,0" Text="Package Price" FontSize="30" TextWrapping="Wrap" VerticalAlignment="Top" Width="200"/>
+        <TextBlock HorizontalAlignment="Left" Height="50" Margin="300,400,0,0" Text="{Binding PackageIncludes.FixedPrice,Mode=TwoWay}" FontSize="30" TextWrapping="Wrap" VerticalAlignment="Top" Width="150"/>
         <TextBlock HorizontalAlignment="Left" Height="50" Margin="50,500,0,0" Text="Out Of Package" FontSize="40" TextWrapping="Wrap" VerticalAlignment="Top" Width="300"/>
         <TextBlock HorizontalAlignment="Left" Height="50" Margin="50,550,0,0" Text="Minutes Beyond Package Limit" FontSize="25" TextWrapping="Wrap" VerticalAlignment="Top" Width="350"/>
-        <TextBlock HorizontalAlignment="Left" Height="50" Margin="400,550,0,0" Text="" FontSize="30" TextWrapping="Wrap" VerticalAlignment="Top" Width="150"/>
+        <TextBlock HorizontalAlignment="Left" Text="{Binding MinutesBeyondLimit,Mode=TwoWay}" Height="50" Margin="400,550,0,0" FontSize="30" TextWrapping="Wrap" VerticalAlignment="Top" Width="150"/>
         <TextBlock HorizontalAlignment="Left" Height="50" Margin="550,550,0,0" Text="Price Per Minute" FontSize="30" TextWrapping="Wrap" VerticalAlignment="Top" Width="250"/>
-        <TextBlock HorizontalAlignment="Left" Height="50" Margin="800,550,0,0" Text="" FontSize="30" TextWrapping="Wrap" VerticalAlignment="Top" Width="150"/>
+        <TextBlock HorizontalAlignment="Left" Height="50" Margin="800,550,0,0" Text="{Binding ClientType.MinutePrice,Mode=TwoWay}" FontSize="30" TextWrapping="Wrap" VerticalAlignment="Top" Width="150"/>
         <TextBlock HorizontalAlignment="Left" Height="50" Margin="950,550,0,0" Text="Total" FontSize="30" TextWrapping="Wrap" VerticalAlignment="Top" Width="100"/>
         <TextBlock HorizontalAlignment="Left" Height="50" Margin="1100,550,0,0" Text="" FontSize="30" TextWrapping="Wrap" VerticalAlignment="Top" Width="150"/>
-        <TextBlock HorizontalAlignment="Left" Height="50" Margin="50,600,0,0" Text="SMS Beyond Package Limit" FontSize="25" TextWrapping="Wrap" VerticalAlignment="Top" Width="350"/>
-        <TextBlock HorizontalAlignment="Left" Height="50" Margin="400,600,0,0" Text="" FontSize="30" TextWrapping="Wrap" VerticalAlignment="Top" Width="150"/>
         <TextBlock HorizontalAlignment="Left" Height="50" Margin="550,600,0,0" Text="Price Per SMS" FontSize="30" TextWrapping="Wrap" VerticalAlignment="Top" Width="250"/>
-        <TextBlock HorizontalAlignment="Left" Height="50" Margin="800,600,0,0" Text="" FontSize="30" TextWrapping="Wrap" VerticalAlignment="Top" Width="150"/>
+        <TextBlock HorizontalAlignment="Left" Height="50" Margin="800,600,0,0" Text="{Binding ClientType.SMSPrice,Mode=TwoWay}" FontSize="30" TextWrapping="Wrap" VerticalAlignment="Top" Width="150"/>
         <TextBlock HorizontalAlignment="Left" Height="50" Margin="950,600,0,0" Text="Total" FontSize="30" TextWrapping="Wrap" VerticalAlignment="Top" Width="100"/>
         <TextBlock HorizontalAlignment="Left" Height="50" Margin="1100,600,0,0" Text="" FontSize="30" TextWrapping="Wrap" VerticalAlignment="Top" Width="150"/>
-        <TextBlock HorizontalAlignment="Left" Height="50" Margin="50,650,0,0" Text="Extra For" FontSize="30" TextWrapping="Wrap" VerticalAlignment="Top" Width="200"/>
-        <TextBlock HorizontalAlignment="Left" Height="50" Margin="300,650,0,0" Text="" FontSize="30" TextWrapping="Wrap" VerticalAlignment="Top" Width="150"/>
-        <TextBlock HorizontalAlignment="Left" Height="50" Margin="950,650,0,0" Text="Total" FontSize="30" TextWrapping="Wrap" VerticalAlignment="Top" Width="100"/>
-        <TextBlock HorizontalAlignment="Left" Height="50" Margin="1100,650,0,0" Text="" FontSize="30" TextWrapping="Wrap" VerticalAlignment="Top" Width="150"/>
         <TextBlock HorizontalAlignment="Left" Height="50" Margin="50,700,0,0" Text="Total" FontSize="40" TextWrapping="Wrap" VerticalAlignment="Top" Width="200"/>
         <TextBlock HorizontalAlignment="Left" Height="50" Margin="300,700,0,0" Text="" FontSize="30" TextWrapping="Wrap" VerticalAlignment="Top" Width="150"/>
 

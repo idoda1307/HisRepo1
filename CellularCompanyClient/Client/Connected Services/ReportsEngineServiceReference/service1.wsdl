@@ -52,7 +52,7 @@
   </wsdl:binding>
   <wsdl:service name="ReportsEngineService">
     <wsdl:port name="BasicHttpBinding_IReportsEngineService" binding="tns:BasicHttpBinding_IReportsEngineService">
-      <soap:address location="http://localhost:61783/services/ReportsEngineService.svc" />
+      <soap:address location="http://localhost:61783/Services/ReportsEngineService.svc" />
     </wsdl:port>
   </wsdl:service>
 </wsdl:definitions>

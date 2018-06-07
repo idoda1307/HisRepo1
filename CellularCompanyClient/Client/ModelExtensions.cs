@@ -90,6 +90,19 @@ namespace Client
             };
         }
 
+        public static ClientTypeModel ToModel1(this InvoiceServiceReference.ClientTypeDto clientType)
+        {
+            if (clientType == null) return null;
+            return new ClientTypeModel()
+            {
+                ClientTypeId = clientType.ClientTypeId,
+                MinutePrice = clientType.MinutePrice,
+                SMSPrice = clientType.SMSPrice,
+                TypeName = clientType.TypeName
+                //Clients = clientType.Clients.Select(c => c.ToModel()).ToList()
+            };
+        }
+
         public static CRMServiceReference.ClientTypeDto ToDto(this ClientTypeModel clientType)
         {
             if (clientType == null) return null;
@@ -150,6 +163,21 @@ namespace Client
                 Number = line.Number,
                 PackageId=line.PackageId,
                 Status = line.Status,
+                //Calls = line.Calls.Select(c => c.ToDto()).ToList(),
+                //Client = line.Client.ToDto(),
+                // SMS = line.SMS.Select(s => s.ToDto()).ToList()
+            };
+        }
+
+        public static InvoiceServiceReference.LineDto ToDto1(this LineModel line)
+        {
+            if (line == null) return null;
+            return new InvoiceServiceReference.LineDto()
+            {
+                ClientId = line.ClientId,
+                LineId = line.LineId,
+                Number = line.Number,
+                PackageId = line.PackageId
                 //Calls = line.Calls.Select(c => c.ToDto()).ToList(),
                 //Client = line.Client.ToDto(),
                 // SMS = line.SMS.Select(s => s.ToDto()).ToList()
@@ -247,6 +275,34 @@ namespace Client
             {
                 if (package == null) return null;
                 return new CRMServiceReference.PackageIncludesDto()
+                {
+                    DiscountPrecentage = package.DiscountPrecentage,
+                    FixedPrice = package.FixedPrice,
+                    Id = package.Id,
+                    IncludeName = package.IncludeName,
+                    InsideFamilyCalls = package.InsideFamilyCalls,
+                    MaxMinute = package.MaxMinute,
+                    MostCalledNumber = package.MostCalledNumber,
+                    PackageId = package.PackageId,
+                    //Package = package.Package.ToDto()
+                    //Package = package.Package.ToDto(),
+                    //SelectedNumber = package.SelectedNumber.ToDto(),
+                    //Line=package.Line.ToDto(),
+                };
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex.Message);
+                return null;
+            }
+        }
+
+        public static InvoiceServiceReference.PackageIncludesDto ToDto1(this PackageIncludesModel package)
+        {
+            try
+            {
+                if (package == null) return null;
+                return new InvoiceServiceReference.PackageIncludesDto()
                 {
                     DiscountPrecentage = package.DiscountPrecentage,
                     FixedPrice = package.FixedPrice,

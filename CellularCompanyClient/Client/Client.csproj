@@ -204,6 +204,9 @@
     <None Include="Connected Services\InvoiceServiceReference\Client.InvoiceServiceReference.CallsDto.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\InvoiceServiceReference\Client.InvoiceServiceReference.ClientTypeDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\InvoiceServiceReference\Client.InvoiceServiceReference.LineDto.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -229,14 +232,14 @@
     <None Include="Connected Services\InvoiceServiceReference\InvoiceService3.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\ReportsEngineServiceReference\Arrays.xsd">
+    <None Include="Connected Services\ReportsEngineServiceReference\Arrays1.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\ReportsEngineServiceReference\service.wsdl" />
-    <None Include="Connected Services\ReportsEngineServiceReference\service.xsd">
+    <None Include="Connected Services\ReportsEngineServiceReference\service1.wsdl" />
+    <None Include="Connected Services\ReportsEngineServiceReference\service2.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\ReportsEngineServiceReference\service1.xsd">
+    <None Include="Connected Services\ReportsEngineServiceReference\service21.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Properties\ServiceReferences.Designer.ClientConfig" />

@@ -71,4 +71,48 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="CalculateNumberOfMinutesLeftInPackage">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="minutesInPackage" type="xs:int" />
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/Common.Models" minOccurs="0" name="line" nillable="true" type="q8:LineDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CalculateNumberOfMinutesLeftInPackageResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CalculateNumberOfMinutesLeftInPackageResult" type="xs:double" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetClientType">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="clientTypeId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetClientTypeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/Common.Models" minOccurs="0" name="GetClientTypeResult" nillable="true" type="q9:ClientTypeDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNumberOfMinutes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/Common.Models" minOccurs="0" name="line" nillable="true" type="q10:LineDto" />
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/Common.Models" minOccurs="0" name="packageIncludes" nillable="true" type="q11:PackageIncludesDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNumberOfMinutesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetNumberOfMinutesResult" type="xs:double" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
 </xs:schema>

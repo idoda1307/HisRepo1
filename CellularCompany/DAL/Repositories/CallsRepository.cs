@@ -12,7 +12,7 @@ using Common.Interfaces.RepositoryInterfaces;
 
 namespace DAL.Repositories
 {
-    public class CallsRepository: ICallsRepository
+    public class CallsRepository : ICallsRepository
     {
         public async Task<CallsDto> CreateCall(CallsDto call)
         {
@@ -29,14 +29,14 @@ namespace DAL.Repositories
                     }
                     return null;
                 }
-                catch(Exception ex)
+                catch (Exception ex)
                 {
                     Debug.WriteLine(ex.Message);
                     return null;
                 }
             }
         }
-        
+
         public CallsDto GetCall(int id)
         {
             using (CellularCompanyContext db = new CellularCompanyContext())
@@ -53,24 +53,36 @@ namespace DAL.Repositories
             }
         }
 
-        public IEnumerable<CallsDto> GetCalls(string clientId)
+        public IEnumerable<CallsDto> GetCalls(int lineId)
         {
             using (CellularCompanyContext db = new CellularCompanyContext())
             {
                 try
                 {
-                    ClientEntity client = db.Clients.FirstOrDefault(c => c.ClientId == clientId);
-                    var lines = db.Lines.Where(c => c.ClientId == clientId).ToList();
+                    var calls = db.Calls.Where(l => l.LineId == lineId).ToList();
+                    return calls.Select(c => c.ToDto());
+
+                }
+                catch (Exception ex)
+                {
+                    Debug.WriteLine(ex.Message);
+                    return null;
+                }
+            }
+        }
+
+        public IEnumerable<CallsDto> GetCallsOfClient(string clientId)
+        {
+            using (CellularCompanyContext db = new CellularCompanyContext())
+            {
+                try
+                {
+                    var lines = db.Lines.Where(l => l.ClientId == clientId).ToList();
                     List<CallsDto> calls = new List<CallsDto>();
-                    List<CallsEntity> callEntities = new List<CallsEntity>();
                     foreach (var item in lines)
                     {
-                        var callList = db.Calls.Where(s => s.LineId == item.LineId).ToList();
-                        callEntities.AddRange(callList);
-                    }
-                    foreach (var item in callEntities)
-                    {
-                        calls.Add(item.ToDto());
+                        var lineCalls = db.Calls.Where(c => c.LineId == item.LineId).Select(c=>c.ToDto()).ToList();
+                        calls.AddRange(lineCalls);
                     }
                     return calls;
                 }
@@ -78,6 +90,25 @@ namespace DAL.Repositories
                 {
                     Debug.WriteLine(ex.Message);
                     return null;
+                }
+            }
+        }
+
+        public double GetNumberOfMinutes(LineDto line,PackageIncludesDto packageIncludes)
+        {
+            using (CellularCompanyContext db = new CellularCompanyContext())
+            {
+                try
+                {
+                    double minutes = db.Calls.Where(l => l.LineId == line.LineId).Sum(l => l.Duration);
+                    if (minutes >= packageIncludes.MaxMinute)
+                        return minutes - packageIncludes.MaxMinute;
+                    else return 0;
+                }
+                catch (Exception ex)
+                {
+                    Debug.WriteLine(ex.Message);
+                    return 0;
                 }
             }
         }

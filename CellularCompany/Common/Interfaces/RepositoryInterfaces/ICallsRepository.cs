@@ -11,6 +11,8 @@ namespace Common.Interfaces.RepositoryInterfaces
     {
         Task<CallsDto> CreateCall(CallsDto call);
         CallsDto GetCall(int id);
-        IEnumerable<CallsDto> GetCalls(string clientId);
+        IEnumerable<CallsDto> GetCalls(int lineId);
+        IEnumerable<CallsDto> GetCallsOfClient(string clientId);
+        double GetNumberOfMinutes(LineDto line, PackageIncludesDto packageIncludes);
     }
 }

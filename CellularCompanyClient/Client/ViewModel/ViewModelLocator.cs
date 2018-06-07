@@ -41,7 +41,8 @@ namespace Client.ViewModel
                 SimpleIoc.Default.Register<IClientService, ClientService>();
                 SimpleIoc.Default.Register<ILineService, LineService>();
                 SimpleIoc.Default.Register<ISimulatorService, SimulatorService>();
-                SimpleIoc.Default.Register<IManagerService,ManagerService>();
+                SimpleIoc.Default.Register<IManagerService, ManagerService>();
+                SimpleIoc.Default.Register<IInvoiceService, InvoiceService>();
                 //register view models
                 SimpleIoc.Default.Register<MainViewModel>();
                 SimpleIoc.Default.Register<ClientViewModel>();
@@ -102,7 +103,15 @@ namespace Client.ViewModel
         {
             get
             {
-                return ServiceLocator.Current.GetInstance<PaymentViewViewModel>();
+                try
+                {
+                    return ServiceLocator.Current.GetInstance<PaymentViewViewModel>();
+                }
+                catch(Exception ex)
+                {
+                    Debug.WriteLine(ex.Message);
+                    return null;
+                }
             }
         }
 

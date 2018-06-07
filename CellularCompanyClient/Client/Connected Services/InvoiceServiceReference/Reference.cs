@@ -965,6 +965,15 @@ namespace Client.InvoiceServiceReference {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IInvoiceService/GetLinePackageIncludes", ReplyAction="http://tempuri.org/IInvoiceService/GetLinePackageIncludesResponse")]
         System.Threading.Tasks.Task<Client.InvoiceServiceReference.PackageIncludesDto> GetLinePackageIncludesAsync(int packageId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IInvoiceService/CalculateNumberOfMinutesLeftInPackage", ReplyAction="http://tempuri.org/IInvoiceService/CalculateNumberOfMinutesLeftInPackageResponse")]
+        System.Threading.Tasks.Task<double> CalculateNumberOfMinutesLeftInPackageAsync(int minutesInPackage, Client.InvoiceServiceReference.LineDto line);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IInvoiceService/GetClientType", ReplyAction="http://tempuri.org/IInvoiceService/GetClientTypeResponse")]
+        System.Threading.Tasks.Task<Client.InvoiceServiceReference.ClientTypeDto> GetClientTypeAsync(int clientTypeId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IInvoiceService/GetNumberOfMinutes", ReplyAction="http://tempuri.org/IInvoiceService/GetNumberOfMinutesResponse")]
+        System.Threading.Tasks.Task<double> GetNumberOfMinutesAsync(Client.InvoiceServiceReference.LineDto line, Client.InvoiceServiceReference.PackageIncludesDto packageIncludes);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -1028,6 +1037,18 @@ namespace Client.InvoiceServiceReference {
         
         public System.Threading.Tasks.Task<Client.InvoiceServiceReference.PackageIncludesDto> GetLinePackageIncludesAsync(int packageId) {
             return base.Channel.GetLinePackageIncludesAsync(packageId);
+        }
+        
+        public System.Threading.Tasks.Task<double> CalculateNumberOfMinutesLeftInPackageAsync(int minutesInPackage, Client.InvoiceServiceReference.LineDto line) {
+            return base.Channel.CalculateNumberOfMinutesLeftInPackageAsync(minutesInPackage, line);
+        }
+        
+        public System.Threading.Tasks.Task<Client.InvoiceServiceReference.ClientTypeDto> GetClientTypeAsync(int clientTypeId) {
+            return base.Channel.GetClientTypeAsync(clientTypeId);
+        }
+        
+        public System.Threading.Tasks.Task<double> GetNumberOfMinutesAsync(Client.InvoiceServiceReference.LineDto line, Client.InvoiceServiceReference.PackageIncludesDto packageIncludes) {
+            return base.Channel.GetNumberOfMinutesAsync(line, packageIncludes);
         }
         
         public virtual System.Threading.Tasks.Task OpenAsync() {

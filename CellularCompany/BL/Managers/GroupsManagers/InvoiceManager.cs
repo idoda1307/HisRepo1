@@ -30,6 +30,7 @@ namespace BL.GroupManagers.Managers
         {
             callManager = GetContainer().Resolve<ICallManager>();
             smsManager = GetContainer().Resolve<ISMSManager>();
+            crmManager = GetContainer().Resolve<ICRMManager>();
         }
 
         private IContainer GetContainer()
@@ -81,35 +82,61 @@ namespace BL.GroupManagers.Managers
             }
         }
 
-        public void GetDetails(PaymentDto payment)
+        public ClientTypeDto GetClientType(int typeId)
         {
-            List<LineDto> lines = payment.Client.Lines.ToList();
-            double callsExternalPrice = lines.Sum(l => l.Calls.Sum(c=>c.ExternalPrice));
-            double smsExternalPrice = lines.Sum(l => l.SMS.Sum(s => s.ExternalPrice));
-            double minutePrice = payment.Client.ClientType.MinutePrice;
-            double smsPrice = payment.Client.ClientType.SMSPrice;
-            int numberOfSms= lines.Select(l => l.SMS).Count();
-            double packagesPrice = lines.Sum(l => l.Package.PackageTotalPrice);
-            //payment.TotalPayment = minutePrice * numberOfCalls + smsPrice * numberOfSms+packagesPrice+callsExternalPrice+smsExternalPrice;
-        }
-
-        public void ExportDataToExcel()
-        {
-            using (ExcelPackage excel = new ExcelPackage())
+            lock(obj)
             {
-                excel.Workbook.Worksheets.Add("Worksheet1");
-                
-                List<string[]> headerRow = new List<string[]>()
-                {
-                 new string[] { "Line", "Permanent Billings", "Changed Billings", "Packages Use" }
-                };
-                string headerRange = "A1:" + Char.ConvertFromUtf32(headerRow[0].Length + 64) + "1";
-                var excelWorksheet = excel.Workbook.Worksheets["Worksheet1"];
-                excelWorksheet.Cells[headerRange].LoadFromArrays(headerRow);
-
-                FileInfo excelFile = new FileInfo(@"C:\Users\idoda\Desktop\MonthlyBilling\test.xlsx");
-                excel.SaveAs(excelFile);
+                return crmManager.GetClientType(typeId);
             }
         }
+
+        public double CalculateNumberOfMinutesLeftInPackage(int minutesInPackage,LineDto line)
+        {
+            lock (obj)
+            {
+                List<CallsDto> list = callManager.GetCallsDtos(line.LineId).ToList();
+                double minutesUsed = list.Sum(l => l.Duration);
+                return minutesInPackage - minutesUsed;
+            }
+        }
+
+        public double GetNumberOfMinutes(LineDto line, PackageIncludesDto packageIncludes)
+        {
+            lock(obj)
+            {
+                return callManager.GetNumberOfMinutes(line, packageIncludes);
+            }
+        }
+
+        //public void GetDetails(PaymentDto payment)
+        //{
+        //    List<LineDto> lines = payment.Client.Lines.ToList();
+        //    double callsExternalPrice = lines.Sum(l => l.Calls.Sum(c=>c.ExternalPrice));
+        //    double smsExternalPrice = lines.Sum(l => l.SMS.Sum(s => s.ExternalPrice));
+        //    double minutePrice = payment.Client.ClientType.MinutePrice;
+        //    double smsPrice = payment.Client.ClientType.SMSPrice;
+        //    int numberOfSms= lines.Select(l => l.SMS).Count();
+        //    double packagesPrice = lines.Sum(l => l.Package.PackageTotalPrice);
+        //    //payment.TotalPayment = minutePrice * numberOfCalls + smsPrice * numberOfSms+packagesPrice+callsExternalPrice+smsExternalPrice;
+        //}
+
+        //public void ExportDataToExcel()
+        //{
+        //    using (ExcelPackage excel = new ExcelPackage())
+        //    {
+        //        excel.Workbook.Worksheets.Add("Worksheet1");
+                
+        //        List<string[]> headerRow = new List<string[]>()
+        //        {
+        //         new string[] { "Line", "Permanent Billings", "Changed Billings", "Packages Use" }
+        //        };
+        //        string headerRange = "A1:" + Char.ConvertFromUtf32(headerRow[0].Length + 64) + "1";
+        //        var excelWorksheet = excel.Workbook.Worksheets["Worksheet1"];
+        //        excelWorksheet.Cells[headerRange].LoadFromArrays(headerRow);
+
+        //        FileInfo excelFile = new FileInfo(@"C:\Users\idoda\Desktop\MonthlyBilling\test.xlsx");
+        //        excel.SaveAs(excelFile);
+        //    }
+        //}
     }
 }

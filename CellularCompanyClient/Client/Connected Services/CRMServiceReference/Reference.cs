@@ -750,9 +750,6 @@ namespace Client.CRMServiceReference {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICRMService/UpdatePackage", ReplyAction="http://tempuri.org/ICRMService/UpdatePackageResponse")]
         System.Threading.Tasks.Task<Client.CRMServiceReference.PackageDto> UpdatePackageAsync(Client.CRMServiceReference.PackageDto package, int packageId);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICRMService/GetLinePackage", ReplyAction="http://tempuri.org/ICRMService/GetLinePackageResponse")]
-        System.Threading.Tasks.Task<Client.CRMServiceReference.PackageDto> GetLinePackageAsync(int lineId);
-        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICRMService/GetSelectedNumbers", ReplyAction="http://tempuri.org/ICRMService/GetSelectedNumbersResponse")]
         System.Threading.Tasks.Task<System.Collections.Generic.List<string>> GetSelectedNumbersAsync(int lineId);
         
@@ -848,10 +845,6 @@ namespace Client.CRMServiceReference {
         
         public System.Threading.Tasks.Task<Client.CRMServiceReference.PackageDto> UpdatePackageAsync(Client.CRMServiceReference.PackageDto package, int packageId) {
             return base.Channel.UpdatePackageAsync(package, packageId);
-        }
-        
-        public System.Threading.Tasks.Task<Client.CRMServiceReference.PackageDto> GetLinePackageAsync(int lineId) {
-            return base.Channel.GetLinePackageAsync(lineId);
         }
         
         public System.Threading.Tasks.Task<System.Collections.Generic.List<string>> GetSelectedNumbersAsync(int lineId) {

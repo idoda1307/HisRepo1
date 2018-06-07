@@ -57,12 +57,6 @@
   <wsdl:message name="ICRMService_UpdatePackage_OutputMessage">
     <wsdl:part name="parameters" element="tns:UpdatePackageResponse" />
   </wsdl:message>
-  <wsdl:message name="ICRMService_GetLinePackage_InputMessage">
-    <wsdl:part name="parameters" element="tns:GetLinePackage" />
-  </wsdl:message>
-  <wsdl:message name="ICRMService_GetLinePackage_OutputMessage">
-    <wsdl:part name="parameters" element="tns:GetLinePackageResponse" />
-  </wsdl:message>
   <wsdl:message name="ICRMService_GetSelectedNumbers_InputMessage">
     <wsdl:part name="parameters" element="tns:GetSelectedNumbers" />
   </wsdl:message>
@@ -137,10 +131,6 @@
     <wsdl:operation name="UpdatePackage">
       <wsdl:input wsaw:Action="http://tempuri.org/ICRMService/UpdatePackage" message="tns:ICRMService_UpdatePackage_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ICRMService/UpdatePackageResponse" message="tns:ICRMService_UpdatePackage_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="GetLinePackage">
-      <wsdl:input wsaw:Action="http://tempuri.org/ICRMService/GetLinePackage" message="tns:ICRMService_GetLinePackage_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/ICRMService/GetLinePackageResponse" message="tns:ICRMService_GetLinePackage_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="GetSelectedNumbers">
       <wsdl:input wsaw:Action="http://tempuri.org/ICRMService/GetSelectedNumbers" message="tns:ICRMService_GetSelectedNumbers_InputMessage" />
@@ -238,15 +228,6 @@
     </wsdl:operation>
     <wsdl:operation name="UpdatePackage">
       <soap:operation soapAction="http://tempuri.org/ICRMService/UpdatePackage" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="GetLinePackage">
-      <soap:operation soapAction="http://tempuri.org/ICRMService/GetLinePackage" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

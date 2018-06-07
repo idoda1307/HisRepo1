@@ -132,7 +132,7 @@ namespace BL.GroupManagers.Managers
         public double GetCallsPrice(ClientDto item, ClientTypeDto clientType)
         {
             double callPrice = clientType.MinutePrice;
-            List<CallsDto> calls = _callManager.GetCallsDtos(item.ClientId).Where(c => c.Time.Month == DateTime.Now.Month).ToList();
+            List<CallsDto> calls = _callManager.GetCallsOfClient(item.ClientId).Where(c => c.Time.Month == DateTime.Now.Month).ToList();
             double totalPrice = 0;
             foreach (var call in calls)
             {
