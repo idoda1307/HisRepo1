@@ -12,5 +12,6 @@ namespace Common.Interfaces.RepositoryInterfaces
         Task<SMSDto> CreateSMS(SMSDto sms);
         SMSDto GetSMS(int id);
         IEnumerable<SMSDto> GetSMSs(string clientId);
+        IEnumerable<SMSDto> GetSmssOfLine(int lineId);
     }
 }

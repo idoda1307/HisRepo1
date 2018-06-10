@@ -52,6 +52,22 @@ namespace DAL.Repositories
                 }
             }
         }
+        public IEnumerable<SMSDto> GetSmssOfLine(int lineId)
+        {
+            using (CellularCompanyContext db = new CellularCompanyContext())
+            {
+                try
+                {
+                    var smss = db.SMS.Where(s => s.LineId == lineId).ToList();
+                    return smss.Select(s => s.ToDto());
+                }
+                catch (Exception ex)
+                {
+                    Debug.WriteLine(ex.Message);
+                    return null;
+                }
+            }
+        }
 
         public IEnumerable<SMSDto> GetSMSs(string clientId)
         {

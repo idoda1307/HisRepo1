@@ -105,6 +105,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Connected Services\OptimalPackageServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Connected Services\ReportsEngineServiceReference\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -116,6 +121,7 @@
     <Compile Include="Infrastructure\ILineService.cs" />
     <Compile Include="Infrastructure\IManagerService.cs" />
     <Compile Include="Infrastructure\IInvoiceService.cs" />
+    <Compile Include="Infrastructure\IOptimalPackageService.cs" />
     <Compile Include="Infrastructure\ISimulatorService.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
@@ -157,6 +163,7 @@
     <Compile Include="Services\LineService.cs" />
     <Compile Include="Services\ManagerService.cs" />
     <Compile Include="Services\InvoiceService.cs" />
+    <Compile Include="Services\OptimalPackageService.cs" />
     <Compile Include="Services\SimulatorService.cs" />
     <Compile Include="ViewModel\ClientViewModel.cs" />
     <Compile Include="ViewModel\LinesViewModel.cs" />
@@ -232,6 +239,13 @@
     <None Include="Connected Services\InvoiceServiceReference\InvoiceService3.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Connected Services\OptimalPackageServiceReference\OptimalPackageService1.wsdl" />
+    <None Include="Connected Services\OptimalPackageServiceReference\OptimalPackageService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\OptimalPackageServiceReference\OptimalPackageService21.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Connected Services\ReportsEngineServiceReference\Arrays1.xsd">
       <SubType>Designer</SubType>
     </None>
@@ -264,6 +278,13 @@
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
     <None Include="Connected Services\InvoiceServiceReference\InvoiceService.disco" />
+    <None Include="Connected Services\OptimalPackageServiceReference\configuration91.svcinfo" />
+    <None Include="Connected Services\OptimalPackageServiceReference\configuration.svcinfo" />
+    <None Include="Connected Services\OptimalPackageServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Connected Services\OptimalPackageServiceReference\OptimalPackageService1.disco" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
@@ -332,6 +353,7 @@
   <ItemGroup>
     <WCFMetadataStorage Include="Connected Services\CRMServiceReference\" />
     <WCFMetadataStorage Include="Connected Services\InvoiceServiceReference\" />
+    <WCFMetadataStorage Include="Connected Services\OptimalPackageServiceReference\" />
     <WCFMetadataStorage Include="Connected Services\ReportsEngineServiceReference\" />
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">

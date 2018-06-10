@@ -36,5 +36,10 @@ namespace BL.Managers.RepositoriesManagers
         {
             return GetContainer().Resolve<ISMSRepository>().GetSMSs(clientId);
         }
+
+        public IEnumerable<SMSDto> GetSmssOfLine(int lineId)
+        {
+            return GetContainer().Resolve<ISMSRepository>().GetSmssOfLine(lineId);
+        }
     }
 }

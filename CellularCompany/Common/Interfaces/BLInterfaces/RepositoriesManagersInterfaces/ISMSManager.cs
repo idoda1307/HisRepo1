@@ -12,5 +12,6 @@ namespace Common.Interfaces.BLInterfaces.RepositoriesManagersInterfaces
         Task<SMSDto> AddSMSDto(SMSDto dto);
         SMSDto GetSMSDto(int smsId);
         IEnumerable<SMSDto> GetSMSDtos(string clientId);
+        IEnumerable<SMSDto> GetSmssOfLine(int lineId);
     }
 }

@@ -43,6 +43,7 @@ namespace Client.ViewModel
                 SimpleIoc.Default.Register<ISimulatorService, SimulatorService>();
                 SimpleIoc.Default.Register<IManagerService, ManagerService>();
                 SimpleIoc.Default.Register<IInvoiceService, InvoiceService>();
+                SimpleIoc.Default.Register<IOptimalPackageService, OptimalPackageService>();
                 //register view models
                 SimpleIoc.Default.Register<MainViewModel>();
                 SimpleIoc.Default.Register<ClientViewModel>();

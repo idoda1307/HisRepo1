@@ -22,7 +22,7 @@ namespace Client.CRMServiceReference {
         
         private string AddressField;
         
-        private System.Nullable<int> CallsToCenterField;
+        private int CallsToCenterField;
         
         private string ClientIdField;
         
@@ -50,7 +50,7 @@ namespace Client.CRMServiceReference {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<int> CallsToCenter {
+        public int CallsToCenter {
             get {
                 return this.CallsToCenterField;
             }

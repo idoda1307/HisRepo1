@@ -26,7 +26,7 @@ namespace DAL.Models
         public string Address { get; set; }
         [Required]
         public string ContactNumber { get; set; }
-        public int? CallsToCenter { get; set; }
+        public int CallsToCenter { get; set; }
         
         [ForeignKey(nameof(ClientType))]
         public int ClientTypeId { get; set; }

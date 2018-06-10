@@ -26,6 +26,7 @@ namespace Common.Interfaces.BLInterfaces.GroupManagersInterfaces
         //Task<PackageIncludesDto> UpdatePackageIncludes(int id, PackageIncludesDto packageIncludes);
 
         ClientTypeDto GetClientType(int typeId);
+        ClientDto GetClient(string clientId);
         PackageDto GetLinePackage(int lineId);
         PackageIncludesDto GetLinePackageIncludes(int packageId);
         //LineDto GetLine(int lineId);

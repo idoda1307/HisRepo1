@@ -277,7 +277,7 @@ namespace Client.InvoiceServiceReference {
         
         private string AddressField;
         
-        private System.Nullable<int> CallsToCenterField;
+        private int CallsToCenterField;
         
         private string ClientIdField;
         
@@ -305,7 +305,7 @@ namespace Client.InvoiceServiceReference {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<int> CallsToCenter {
+        public int CallsToCenter {
             get {
                 return this.CallsToCenterField;
             }

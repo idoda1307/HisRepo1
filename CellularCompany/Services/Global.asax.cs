@@ -24,6 +24,9 @@ namespace Services
             builder.RegisterType<InvoiceManager>().As<IInvoiceManager>();
             builder.RegisterType<InvoiceService>().AsSelf();
 
+            builder.RegisterType<OptimalPackageManager>().As<IOptimalPackageManager>();
+            builder.RegisterType<OptimalPackageService>().AsSelf();
+
             builder.RegisterType<ReportsEngineManager>().As<IReportsEngineManager>();
             builder.RegisterType<ReportsEngineService>().AsSelf();
 

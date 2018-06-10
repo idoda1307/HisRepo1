@@ -10,10 +10,23 @@
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <TextBlock HorizontalAlignment="Left" TextAlignment="Center" FontSize="50" Height="80" Margin="250,10,0,0" Text="Optimal Package" TextWrapping="Wrap" VerticalAlignment="Top" Width="1000"/>
-        <TextBlock  Height="50" Margin="50,100,0,0" Text="Select Client" TextWrapping="Wrap" VerticalAlignment="Top" Width="250" FontSize="30" HorizontalAlignment="Left"/>
-        <ComboBox HorizontalAlignment="Left" ItemsSource="{Binding Clients, Mode=TwoWay}" SelectedItem="{Binding Client,Mode=TwoWay}" DisplayMemberPath="ClientId" Height="50" Margin="350,100,0,0" VerticalAlignment="Top" Width="300" FontSize="30"/>
-        <TextBlock HorizontalAlignment="Left" Height="50" Margin="50,175,0,0" Text="Select Line" TextWrapping="Wrap" VerticalAlignment="Top" Width="250" FontSize="30"/>
-        <ComboBox HorizontalAlignment="Left" ItemsSource="{Binding Lines,Mode=TwoWay}" SelectedItem="{Binding Line,Mode=TwoWay}" DisplayMemberPath="Number" Height="50" Margin="350,175,0,0" VerticalAlignment="Top" Width="300" FontSize="30"/>
+        <TextBlock  Height="40" Margin="50,100,0,0" Text="Select Client" TextWrapping="Wrap" VerticalAlignment="Top" Width="250" FontSize="30" HorizontalAlignment="Left"/>
+        <ComboBox HorizontalAlignment="Left" ItemsSource="{Binding Clients, Mode=TwoWay}" SelectedItem="{Binding Client,Mode=TwoWay}" DisplayMemberPath="ClientId" Height="40" Margin="350,100,0,0" VerticalAlignment="Top" Width="300" FontSize="30"/>
+        <TextBlock HorizontalAlignment="Left" Height="40" Margin="50,150,0,0" Text="Select Line" TextWrapping="Wrap" VerticalAlignment="Top" Width="250" FontSize="30"/>
+        <ComboBox HorizontalAlignment="Left" ItemsSource="{Binding Lines,Mode=TwoWay}" SelectedItem="{Binding Line,Mode=TwoWay}" DisplayMemberPath="Number" Height="40" Margin="350,150,0,0" VerticalAlignment="Top" Width="300" FontSize="30"/>
+        <Button Content="Calculate" FontSize="30" Command="{Binding CalculateOptimalPackage}" HorizontalAlignment="Left" Height="50" Margin="200,200,0,0" VerticalAlignment="Top" Width="150"/>
+        <TextBlock HorizontalAlignment="Left" Height="40" Margin="50,250,0,0" Text="Client Value" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" FontSize="30"/>
+        <TextBlock HorizontalAlignment="Left" Height="40" Margin="350,250,0,0" Text="{Binding ClientValue,Mode=TwoWay}" VerticalAlignment="Top" Width="300" FontSize="25"/>
+        <TextBlock HorizontalAlignment="Left" Height="40" Margin="50,325,0,0" Text="Total Minutes" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" FontSize="20"/>
+        <TextBlock HorizontalAlignment="Left" Height="40" Margin="350,325,0,0" Text="{Binding TotalMinutes,Mode=TwoWay}" VerticalAlignment="Top" Width="300" FontSize="20"/>
+        <TextBlock HorizontalAlignment="Left" Height="40" Margin="700,325,0,0" Text="Total SMS" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" FontSize="20"/>
+        <TextBlock HorizontalAlignment="Left" Height="40" Margin="1000,325,0,0" Text="{Binding TotalSmss,Mode=TwoWay}" VerticalAlignment="Top" Width="300" FontSize="20"/>
+        <TextBlock HorizontalAlignment="Left" Height="40" Margin="50,375,0,0" Text="Total Minutes Of Top Number" TextWrapping="Wrap" VerticalAlignment="Top" Width="280" FontSize="20"/>
+        <TextBlock HorizontalAlignment="Left" Height="40" Margin="350,375,0,0" Text="{Binding TotalMinutesTopNumber,Mode=TwoWay}" VerticalAlignment="Top" Width="300" FontSize="20"/>
+        <TextBlock HorizontalAlignment="Left" Height="40" Margin="50,425,0,0" Text="Total Minutes Of Top 3 Numbers" TextWrapping="Wrap" VerticalAlignment="Top" Width="290" FontSize="20"/>
+        <TextBlock HorizontalAlignment="Left" Height="40" Margin="350,425,0,0" Text="{Binding TotalMinutes3TopNumbers,Mode=TwoWay}" VerticalAlignment="Top" Width="300" FontSize="20"/>
+        <TextBlock HorizontalAlignment="Left" Height="40" Margin="50,475,0,0" Text="Total Minutes With Family" TextWrapping="Wrap" VerticalAlignment="Top" Width="290" FontSize="20"/>
+        <TextBlock HorizontalAlignment="Left" Height="40" Margin="350,475,0,0" Text="{Binding TotalMinutesWithFamily,Mode=TwoWay}" VerticalAlignment="Top" Width="300" FontSize="20"/>
 
     </Grid>
 </Page>

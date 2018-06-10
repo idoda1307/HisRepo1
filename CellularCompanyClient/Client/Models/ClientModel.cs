@@ -20,7 +20,7 @@ namespace Client.Models
         public string LastName { get; set; }
         public string Address { get; set; }
         public string ContactNumber { get; set; }
-        public int? CallsToCenter { get; set; }
+        public int CallsToCenter { get; set; }
         
         public int ClientTypeId { get; set; }
         public ClientTypeModel ClientType { get; set; }

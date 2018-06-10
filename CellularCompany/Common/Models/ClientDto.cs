@@ -22,7 +22,7 @@ namespace Common.Models
         [DataMember]
         public string ContactNumber { get; set; }
         [DataMember]
-        public int? CallsToCenter { get; set; }
+        public int CallsToCenter { get; set; }
 
         [DataMember]
         public int ClientTypeId { get; set; }

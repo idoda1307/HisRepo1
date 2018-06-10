@@ -36,7 +36,7 @@ namespace Dtos
                 Duration = call.Duration,
                 ExternalPrice = call.ExternalPrice,
                 LineId = call.LineId,
-                Line = call.Line.ToDto(),
+                //Line = call.Line.ToDto(),
                 Time = call.Time
             };
         }
